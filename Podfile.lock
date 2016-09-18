@@ -5,6 +5,9 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - couchbase-lite-ios (1.3.0):
+    - couchbase-lite-ios/SQLite (= 1.3.0)
+  - couchbase-lite-ios/SQLite (1.3.0)
   - FBSDKCoreKit (4.15.0):
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.15.0):
@@ -12,14 +15,16 @@ PODS:
 
 DEPENDENCIES:
   - Bolts
+  - couchbase-lite-ios
   - FBSDKCoreKit
   - FBSDKLoginKit
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  couchbase-lite-ios: c78daeffe910fc871dabbece04439d714b43a651
   FBSDKCoreKit: 6680cbd33a4243d80700f182d0af36b3fa7f3118
   FBSDKLoginKit: 96d9b70b5784490f02ab86119e542a1f182017a8
 
-PODFILE CHECKSUM: e2feb6bed7882d71434463d84c9fd058d1c70183
+PODFILE CHECKSUM: e92356cd3b169f52f87f8edc9a3533234420f2b1
 
 COCOAPODS: 1.0.0
