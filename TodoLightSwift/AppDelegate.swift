@@ -10,17 +10,32 @@ import UIKit
 import FBSDKCoreKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate
+class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelegate
 {
     // MARK: Properties
     
     var window: UIWindow?
+    
+    var currentUserId:String?
+    {
+        set {
+            UserDefaults.standard.set(newValue, forKey: "user_id")
+        }
+        get {
+            return UserDefaults.standard.object(forKey: "user_id") as? String
+        }
+    }
+    
+    var loginViewController:LoginViewController!
 
     // MARK: UIApplicationDelegate
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions);
+        
+        self.loginViewController = self.window?.rootViewController as! LoginViewController
+        self.loginViewController.delegate = self
         
         // Override point for customization after application launch.
         return true
@@ -53,6 +68,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    // MARK: LoginViewControllerDelegate
+    
+    func didLoginAsGuest()
+    {
+        
+    }
+    
+    func didLoginWithFacebookUser(userId:String, name:String, token:String)
+    {
+        
+    }
+    
+    func didLogout()
+    {
+        
     }
 
     // MARK: Alerts

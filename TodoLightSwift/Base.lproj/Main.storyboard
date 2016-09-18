@@ -30,7 +30,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginWithFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OSL-41-Lvg"/>
+                                            <action selector="facebookButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B57-3a-chw"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YP4-DU-31s">
@@ -42,7 +42,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="loginWithGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WiV-F8-6BS"/>
+                                            <action selector="googleButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOa-kr-sxD"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xum-Le-hmx">
@@ -51,7 +51,7 @@
                                         </constraints>
                                         <state key="normal" title="Continue as Guest"/>
                                         <connections>
-                                            <action selector="loginAsGuest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YZ4-aT-YmZ"/>
+                                            <action selector="guestButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RKo-7l-l91"/>
                                         </connections>
                                     </button>
                                 </subviews>
