@@ -1,427 +1,1014 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		507122051D8D6A0F005D6EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507122041D8D6A0F005D6EF9 /* AppDelegate.swift */; };
-		507122071D8D6A0F005D6EF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507122061D8D6A0F005D6EF9 /* ViewController.swift */; };
-		5071220A1D8D6A0F005D6EF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507122081D8D6A0F005D6EF9 /* Main.storyboard */; };
-		5071220C1D8D6A0F005D6EF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5071220B1D8D6A0F005D6EF9 /* Assets.xcassets */; };
-		5071220F1D8D6A0F005D6EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071220D1D8D6A0F005D6EF9 /* LaunchScreen.storyboard */; };
-		5071221A1D8D6A0F005D6EF9 /* TodoLightSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507122191D8D6A0F005D6EF9 /* TodoLightSwiftTests.swift */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		507122161D8D6A0F005D6EF9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 507121F91D8D6A0F005D6EF9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 507122001D8D6A0F005D6EF9;
-			remoteInfo = TodoLightSwift;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		507122011D8D6A0F005D6EF9 /* TodoLightSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoLightSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		507122041D8D6A0F005D6EF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		507122061D8D6A0F005D6EF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		507122091D8D6A0F005D6EF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5071220B1D8D6A0F005D6EF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5071220E1D8D6A0F005D6EF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		507122101D8D6A0F005D6EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		507122151D8D6A0F005D6EF9 /* TodoLightSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodoLightSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		507122191D8D6A0F005D6EF9 /* TodoLightSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoLightSwiftTests.swift; sourceTree = "<group>"; };
-		5071221B1D8D6A0F005D6EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		507121FE1D8D6A0F005D6EF9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		507122121D8D6A0F005D6EF9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		507121F81D8D6A0F005D6EF9 = {
-			isa = PBXGroup;
-			children = (
-				507122031D8D6A0F005D6EF9 /* TodoLightSwift */,
-				507122181D8D6A0F005D6EF9 /* TodoLightSwiftTests */,
-				507122021D8D6A0F005D6EF9 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		507122021D8D6A0F005D6EF9 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				507122011D8D6A0F005D6EF9 /* TodoLightSwift.app */,
-				507122151D8D6A0F005D6EF9 /* TodoLightSwiftTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		507122031D8D6A0F005D6EF9 /* TodoLightSwift */ = {
-			isa = PBXGroup;
-			children = (
-				507122041D8D6A0F005D6EF9 /* AppDelegate.swift */,
-				507122061D8D6A0F005D6EF9 /* ViewController.swift */,
-				507122081D8D6A0F005D6EF9 /* Main.storyboard */,
-				5071220B1D8D6A0F005D6EF9 /* Assets.xcassets */,
-				5071220D1D8D6A0F005D6EF9 /* LaunchScreen.storyboard */,
-				507122101D8D6A0F005D6EF9 /* Info.plist */,
-			);
-			path = TodoLightSwift;
-			sourceTree = "<group>";
-		};
-		507122181D8D6A0F005D6EF9 /* TodoLightSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				507122191D8D6A0F005D6EF9 /* TodoLightSwiftTests.swift */,
-				5071221B1D8D6A0F005D6EF9 /* Info.plist */,
-			);
-			path = TodoLightSwiftTests;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		507122001D8D6A0F005D6EF9 /* TodoLightSwift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5071221E1D8D6A0F005D6EF9 /* Build configuration list for PBXNativeTarget "TodoLightSwift" */;
-			buildPhases = (
-				507121FD1D8D6A0F005D6EF9 /* Sources */,
-				507121FE1D8D6A0F005D6EF9 /* Frameworks */,
-				507121FF1D8D6A0F005D6EF9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TodoLightSwift;
-			productName = TodoLightSwift;
-			productReference = 507122011D8D6A0F005D6EF9 /* TodoLightSwift.app */;
-			productType = "com.apple.product-type.application";
-		};
-		507122141D8D6A0F005D6EF9 /* TodoLightSwiftTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 507122211D8D6A0F005D6EF9 /* Build configuration list for PBXNativeTarget "TodoLightSwiftTests" */;
-			buildPhases = (
-				507122111D8D6A0F005D6EF9 /* Sources */,
-				507122121D8D6A0F005D6EF9 /* Frameworks */,
-				507122131D8D6A0F005D6EF9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				507122171D8D6A0F005D6EF9 /* PBXTargetDependency */,
-			);
-			name = TodoLightSwiftTests;
-			productName = TodoLightSwiftTests;
-			productReference = 507122151D8D6A0F005D6EF9 /* TodoLightSwiftTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		507121F91D8D6A0F005D6EF9 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Max Rozdobudko";
-				TargetAttributes = {
-					507122001D8D6A0F005D6EF9 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = GL9F4DL9W9;
-						ProvisioningStyle = Automatic;
-					};
-					507122141D8D6A0F005D6EF9 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = GL9F4DL9W9;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 507122001D8D6A0F005D6EF9;
-					};
-				};
-			};
-			buildConfigurationList = 507121FC1D8D6A0F005D6EF9 /* Build configuration list for PBXProject "TodoLightSwift" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 507121F81D8D6A0F005D6EF9;
-			productRefGroup = 507122021D8D6A0F005D6EF9 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				507122001D8D6A0F005D6EF9 /* TodoLightSwift */,
-				507122141D8D6A0F005D6EF9 /* TodoLightSwiftTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		507121FF1D8D6A0F005D6EF9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5071220F1D8D6A0F005D6EF9 /* LaunchScreen.storyboard in Resources */,
-				5071220C1D8D6A0F005D6EF9 /* Assets.xcassets in Resources */,
-				5071220A1D8D6A0F005D6EF9 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		507122131D8D6A0F005D6EF9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		507121FD1D8D6A0F005D6EF9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				507122071D8D6A0F005D6EF9 /* ViewController.swift in Sources */,
-				507122051D8D6A0F005D6EF9 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		507122111D8D6A0F005D6EF9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5071221A1D8D6A0F005D6EF9 /* TodoLightSwiftTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		507122171D8D6A0F005D6EF9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 507122001D8D6A0F005D6EF9 /* TodoLightSwift */;
-			targetProxy = 507122161D8D6A0F005D6EF9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		507122081D8D6A0F005D6EF9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				507122091D8D6A0F005D6EF9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5071220D1D8D6A0F005D6EF9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5071220E1D8D6A0F005D6EF9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		5071221C1D8D6A0F005D6EF9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5071221D1D8D6A0F005D6EF9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5071221F1D8D6A0F005D6EF9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GL9F4DL9W9;
-				INFOPLIST_FILE = TodoLightSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.rozd.TodoLightSwift;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		507122201D8D6A0F005D6EF9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GL9F4DL9W9;
-				INFOPLIST_FILE = TodoLightSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.rozd.TodoLightSwift;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		507122221D8D6A0F005D6EF9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = GL9F4DL9W9;
-				INFOPLIST_FILE = TodoLightSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.rozd.TodoLightSwiftTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodoLightSwift.app/TodoLightSwift";
-			};
-			name = Debug;
-		};
-		507122231D8D6A0F005D6EF9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = GL9F4DL9W9;
-				INFOPLIST_FILE = TodoLightSwiftTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.rozd.TodoLightSwiftTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TodoLightSwift.app/TodoLightSwift";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		507121FC1D8D6A0F005D6EF9 /* Build configuration list for PBXProject "TodoLightSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5071221C1D8D6A0F005D6EF9 /* Debug */,
-				5071221D1D8D6A0F005D6EF9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5071221E1D8D6A0F005D6EF9 /* Build configuration list for PBXNativeTarget "TodoLightSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5071221F1D8D6A0F005D6EF9 /* Debug */,
-				507122201D8D6A0F005D6EF9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		507122211D8D6A0F005D6EF9 /* Build configuration list for PBXNativeTarget "TodoLightSwiftTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				507122221D8D6A0F005D6EF9 /* Debug */,
-				507122231D8D6A0F005D6EF9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 507121F91D8D6A0F005D6EF9 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>17A9D1E8F13B3B3AB5D432A8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>505043C11D8DD5A2005A2D7C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>507121F81D8D6A0F005D6EF9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>507122031D8D6A0F005D6EF9</string>
+				<string>507122181D8D6A0F005D6EF9</string>
+				<string>507122021D8D6A0F005D6EF9</string>
+				<string>B0345D2F83318A78E84960B6</string>
+				<string>D8374D86A201C12742E5CD94</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507121F91D8D6A0F005D6EF9</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0800</string>
+				<key>LastUpgradeCheck</key>
+				<string>0800</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Max Rozdobudko</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>507122001D8D6A0F005D6EF9</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.0</string>
+						<key>DevelopmentTeam</key>
+						<string>GL9F4DL9W9</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+					</dict>
+					<key>507122141D8D6A0F005D6EF9</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>8.0</string>
+						<key>DevelopmentTeam</key>
+						<string>GL9F4DL9W9</string>
+						<key>ProvisioningStyle</key>
+						<string>Automatic</string>
+						<key>TestTargetID</key>
+						<string>507122001D8D6A0F005D6EF9</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>507121FC1D8D6A0F005D6EF9</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>507121F81D8D6A0F005D6EF9</string>
+			<key>productRefGroup</key>
+			<string>507122021D8D6A0F005D6EF9</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>507122001D8D6A0F005D6EF9</string>
+				<string>507122141D8D6A0F005D6EF9</string>
+			</array>
+		</dict>
+		<key>507121FC1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5071221C1D8D6A0F005D6EF9</string>
+				<string>5071221D1D8D6A0F005D6EF9</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>507121FD1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>507122261D8DC9F7005D6EF9</string>
+				<string>507122071D8D6A0F005D6EF9</string>
+				<string>507122051D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>507121FE1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7828BA371B68CDE105CA0B16</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>507121FF1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5071220F1D8D6A0F005D6EF9</string>
+				<string>5071220C1D8D6A0F005D6EF9</string>
+				<string>5071220A1D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>507122001D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>5071221E1D8D6A0F005D6EF9</string>
+			<key>buildPhases</key>
+			<array>
+				<string>17A9D1E8F13B3B3AB5D432A8</string>
+				<string>507121FD1D8D6A0F005D6EF9</string>
+				<string>507121FE1D8D6A0F005D6EF9</string>
+				<string>507121FF1D8D6A0F005D6EF9</string>
+				<string>975C679E3D8190BA1A0785E0</string>
+				<string>6C2D99F7C7BCE6993310F90E</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TodoLightSwift</string>
+			<key>productName</key>
+			<string>TodoLightSwift</string>
+			<key>productReference</key>
+			<string>507122011D8D6A0F005D6EF9</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>507122011D8D6A0F005D6EF9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TodoLightSwift.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>507122021D8D6A0F005D6EF9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>507122011D8D6A0F005D6EF9</string>
+				<string>507122151D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122031D8D6A0F005D6EF9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>505043C11D8DD5A2005A2D7C</string>
+				<string>507122241D8DC9E0005D6EF9</string>
+				<string>507122041D8D6A0F005D6EF9</string>
+				<string>507122061D8D6A0F005D6EF9</string>
+				<string>507122081D8D6A0F005D6EF9</string>
+				<string>5071220B1D8D6A0F005D6EF9</string>
+				<string>5071220D1D8D6A0F005D6EF9</string>
+				<string>507122101D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TodoLightSwift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122041D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122051D8D6A0F005D6EF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>507122041D8D6A0F005D6EF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>507122061D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>ViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122071D8D6A0F005D6EF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>507122061D8D6A0F005D6EF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>507122081D8D6A0F005D6EF9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>507122091D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122091D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5071220A1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>507122081D8D6A0F005D6EF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5071220B1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5071220C1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5071220B1D8D6A0F005D6EF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5071220D1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5071220E1D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5071220E1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5071220F1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5071220D1D8D6A0F005D6EF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>507122101D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122111D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5071221A1D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>507122121D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>507122131D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>507122141D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>507122211D8D6A0F005D6EF9</string>
+			<key>buildPhases</key>
+			<array>
+				<string>507122111D8D6A0F005D6EF9</string>
+				<string>507122121D8D6A0F005D6EF9</string>
+				<string>507122131D8D6A0F005D6EF9</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>507122171D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TodoLightSwiftTests</string>
+			<key>productName</key>
+			<string>TodoLightSwiftTests</string>
+			<key>productReference</key>
+			<string>507122151D8D6A0F005D6EF9</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>507122151D8D6A0F005D6EF9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TodoLightSwiftTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>507122161D8D6A0F005D6EF9</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>507121F91D8D6A0F005D6EF9</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>507122001D8D6A0F005D6EF9</string>
+			<key>remoteInfo</key>
+			<string>TodoLightSwift</string>
+		</dict>
+		<key>507122171D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>507122001D8D6A0F005D6EF9</string>
+			<key>targetProxy</key>
+			<string>507122161D8D6A0F005D6EF9</string>
+		</dict>
+		<key>507122181D8D6A0F005D6EF9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>507122191D8D6A0F005D6EF9</string>
+				<string>5071221B1D8D6A0F005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TodoLightSwiftTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122191D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>TodoLightSwiftTests.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5071221A1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>507122191D8D6A0F005D6EF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5071221B1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5071221C1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
+				<string>DEBUG</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5071221D1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INFINITE_RECURSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Owholemodule</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5071221E1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5071221F1D8D6A0F005D6EF9</string>
+				<string>507122201D8D6A0F005D6EF9</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5071221F1D8D6A0F005D6EF9</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8A2A7CB28565E3B8C4C86254</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>GL9F4DL9W9</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TodoLightSwift/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.github.rozd.TodoLightSwift</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>507122201D8D6A0F005D6EF9</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6B763C51606FF068DAB09A9F</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>GL9F4DL9W9</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TodoLightSwift/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.github.rozd.TodoLightSwift</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>507122211D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>507122221D8D6A0F005D6EF9</string>
+				<string>507122231D8D6A0F005D6EF9</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>507122221D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>GL9F4DL9W9</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TodoLightSwiftTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.github.rozd.TodoLightSwiftTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/TodoLightSwift.app/TodoLightSwift</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>507122231D8D6A0F005D6EF9</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES</key>
+				<string>YES</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>DEVELOPMENT_TEAM</key>
+				<string>GL9F4DL9W9</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TodoLightSwiftTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.github.rozd.TodoLightSwiftTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_VERSION</key>
+				<string>3.0</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/TodoLightSwift.app/TodoLightSwift</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>507122241D8DC9E0005D6EF9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>507122251D8DC9F7005D6EF9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>ViewControllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122251D8DC9F7005D6EF9</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>LoginViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>507122261D8DC9F7005D6EF9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>507122251D8DC9F7005D6EF9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6B763C51606FF068DAB09A9F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TodoLightSwift.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TodoLightSwift/Pods-TodoLightSwift.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6C2D99F7C7BCE6993310F90E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TodoLightSwift/Pods-TodoLightSwift-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>7828BA371B68CDE105CA0B16</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF73A2490EAC6CA0FD3A7725</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8A2A7CB28565E3B8C4C86254</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TodoLightSwift.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TodoLightSwift/Pods-TodoLightSwift.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>975C679E3D8190BA1A0785E0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>&#128230; Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TodoLightSwift/Pods-TodoLightSwift-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B0345D2F83318A78E84960B6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8A2A7CB28565E3B8C4C86254</string>
+				<string>6B763C51606FF068DAB09A9F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D8374D86A201C12742E5CD94</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EF73A2490EAC6CA0FD3A7725</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF73A2490EAC6CA0FD3A7725</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_TodoLightSwift.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>507121F91D8D6A0F005D6EF9</string>
+</dict>
+</plist>
