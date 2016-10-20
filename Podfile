@@ -1,6 +1,6 @@
 use_frameworks!
 
-target 'TodoLightSwift' do
+target 'ToDoLite' do
   pod 'Bolts'
   pod 'FBSDKCoreKit'
   pod 'FBSDKLoginKit'
