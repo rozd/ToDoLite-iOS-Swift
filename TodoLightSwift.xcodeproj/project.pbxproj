@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		503ABCD91DB10DF900618AC1 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503ABCD81DB10DF900618AC1 /* Task.swift */; };
+		503ABCDD1DB13EDC00618AC1 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503ABCDC1DB13EDC00618AC1 /* MasterViewController.swift */; };
+		503ABCDF1DB1417500618AC1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503ABCDE1DB1417500618AC1 /* DetailViewController.swift */; };
+		503ABCE21DB1442A00618AC1 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503ABCE11DB1442A00618AC1 /* TaskTableViewCell.swift */; };
+		503ABCE41DB1711300618AC1 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503ABCE31DB1711300618AC1 /* ImageViewController.swift */; };
+		503ABCE61DB2273E00618AC1 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503ABCE51DB2273E00618AC1 /* ShareViewController.swift */; };
+		503ABCE81DB404F000618AC1 /* Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503ABCE71DB404F000618AC1 /* Simple.swift */; };
+		505043C91D8F0850005A2D7C /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 505043C81D8F0850005A2D7C /* NSString+Additions.m */; };
 		507122051D8D6A0F005D6EF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507122041D8D6A0F005D6EF9 /* AppDelegate.swift */; };
 		5071220A1D8D6A0F005D6EF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507122081D8D6A0F005D6EF9 /* Main.storyboard */; };
 		5071220C1D8D6A0F005D6EF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5071220B1D8D6A0F005D6EF9 /* Assets.xcassets */; };
 		5071220F1D8D6A0F005D6EF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5071220D1D8D6A0F005D6EF9 /* LaunchScreen.storyboard */; };
 		5071221A1D8D6A0F005D6EF9 /* TodoLightSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507122191D8D6A0F005D6EF9 /* TodoLightSwiftTests.swift */; };
 		507122261D8DC9F7005D6EF9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507122251D8DC9F7005D6EF9 /* LoginViewController.swift */; };
+		50C207A41DB02AE300A43FA0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C207A31DB02AE300A43FA0 /* Profile.swift */; };
+		50C207A61DB0FFDB00A43FA0 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C207A51DB0FFDB00A43FA0 /* List.swift */; };
+		50C207A81DB1000C00A43FA0 /* Titled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C207A71DB1000C00A43FA0 /* Titled.swift */; };
 		7828BA371B68CDE105CA0B16 /* Pods_TodoLightSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF73A2490EAC6CA0FD3A7725 /* Pods_TodoLightSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +38,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		503ABCD81DB10DF900618AC1 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		503ABCDC1DB13EDC00618AC1 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		503ABCDE1DB1417500618AC1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		503ABCE11DB1442A00618AC1 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		503ABCE31DB1711300618AC1 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		503ABCE51DB2273E00618AC1 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		503ABCE71DB404F000618AC1 /* Simple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simple.swift; sourceTree = "<group>"; };
 		505043C11D8DD5A2005A2D7C /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		505043C21D8EFD52005A2D7C /* TodoLightSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodoLightSwift.entitlements; sourceTree = "<group>"; };
+		505043C31D8F0239005A2D7C /* TodoLightSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TodoLightSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		505043C71D8F0850005A2D7C /* NSString+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
+		505043C81D8F0850005A2D7C /* NSString+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Additions.m"; sourceTree = "<group>"; };
 		507122011D8D6A0F005D6EF9 /* TodoLightSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoLightSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		507122041D8D6A0F005D6EF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		507122091D8D6A0F005D6EF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +60,9 @@
 		507122191D8D6A0F005D6EF9 /* TodoLightSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoLightSwiftTests.swift; sourceTree = "<group>"; };
 		5071221B1D8D6A0F005D6EF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		507122251D8DC9F7005D6EF9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		50C207A31DB02AE300A43FA0 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		50C207A51DB0FFDB00A43FA0 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
+		50C207A71DB1000C00A43FA0 /* Titled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Titled.swift; sourceTree = "<group>"; };
 		6B763C51606FF068DAB09A9F /* Pods-TodoLightSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoLightSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodoLightSwift/Pods-TodoLightSwift.release.xcconfig"; sourceTree = "<group>"; };
 		8A2A7CB28565E3B8C4C86254 /* Pods-TodoLightSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoLightSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodoLightSwift/Pods-TodoLightSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		EF73A2490EAC6CA0FD3A7725 /* Pods_TodoLightSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoLightSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +87,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		503ABCE01DB1440400618AC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				503ABCE11DB1442A00618AC1 /* TaskTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		505043C41D8F0646005A2D7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				505043C71D8F0850005A2D7C /* NSString+Additions.h */,
+				505043C81D8F0850005A2D7C /* NSString+Additions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		507121F81D8D6A0F005D6EF9 = {
 			isa = PBXGroup;
 			children = (
@@ -86,14 +127,18 @@
 		507122031D8D6A0F005D6EF9 /* TodoLightSwift */ = {
 			isa = PBXGroup;
 			children = (
+				505043C41D8F0646005A2D7C /* Extensions */,
+				50C207A21DB02AB200A43FA0 /* Model */,
+				503ABCE01DB1440400618AC1 /* View */,
+				507122241D8DC9E0005D6EF9 /* ViewControllers */,
 				505043C21D8EFD52005A2D7C /* TodoLightSwift.entitlements */,
 				505043C11D8DD5A2005A2D7C /* Podfile */,
-				507122241D8DC9E0005D6EF9 /* ViewControllers */,
 				507122041D8D6A0F005D6EF9 /* AppDelegate.swift */,
 				507122081D8D6A0F005D6EF9 /* Main.storyboard */,
 				5071220B1D8D6A0F005D6EF9 /* Assets.xcassets */,
 				5071220D1D8D6A0F005D6EF9 /* LaunchScreen.storyboard */,
 				507122101D8D6A0F005D6EF9 /* Info.plist */,
+				505043C31D8F0239005A2D7C /* TodoLightSwift-Bridging-Header.h */,
 			);
 			path = TodoLightSwift;
 			sourceTree = "<group>";
@@ -111,8 +156,24 @@
 			isa = PBXGroup;
 			children = (
 				507122251D8DC9F7005D6EF9 /* LoginViewController.swift */,
+				503ABCDC1DB13EDC00618AC1 /* MasterViewController.swift */,
+				503ABCDE1DB1417500618AC1 /* DetailViewController.swift */,
+				503ABCE31DB1711300618AC1 /* ImageViewController.swift */,
+				503ABCE51DB2273E00618AC1 /* ShareViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		50C207A21DB02AB200A43FA0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				50C207A31DB02AE300A43FA0 /* Profile.swift */,
+				50C207A51DB0FFDB00A43FA0 /* List.swift */,
+				50C207A71DB1000C00A43FA0 /* Titled.swift */,
+				503ABCD81DB10DF900618AC1 /* Task.swift */,
+				503ABCE71DB404F000618AC1 /* Simple.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		B0345D2F83318A78E84960B6 /* Pods */ = {
@@ -293,8 +354,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503ABCE81DB404F000618AC1 /* Simple.swift in Sources */,
+				503ABCDF1DB1417500618AC1 /* DetailViewController.swift in Sources */,
+				503ABCDD1DB13EDC00618AC1 /* MasterViewController.swift in Sources */,
+				503ABCE21DB1442A00618AC1 /* TaskTableViewCell.swift in Sources */,
 				507122261D8DC9F7005D6EF9 /* LoginViewController.swift in Sources */,
+				50C207A41DB02AE300A43FA0 /* Profile.swift in Sources */,
 				507122051D8D6A0F005D6EF9 /* AppDelegate.swift in Sources */,
+				503ABCE61DB2273E00618AC1 /* ShareViewController.swift in Sources */,
+				50C207A81DB1000C00A43FA0 /* Titled.swift in Sources */,
+				50C207A61DB0FFDB00A43FA0 /* List.swift in Sources */,
+				503ABCD91DB10DF900618AC1 /* Task.swift in Sources */,
+				503ABCE41DB1711300618AC1 /* ImageViewController.swift in Sources */,
+				505043C91D8F0850005A2D7C /* NSString+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.rozd.TodoLightSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TodoLightSwift/TodoLightSwift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -455,6 +528,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.rozd.TodoLightSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TodoLightSwift/TodoLightSwift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

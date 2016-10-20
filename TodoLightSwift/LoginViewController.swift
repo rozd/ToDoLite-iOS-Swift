@@ -12,7 +12,7 @@ import FBSDKLoginKit
 protocol LoginViewControllerDelegate: class
 {
     func didLoginAsGuest()
-    func didLoginWithFacebookUser(userId:String, name:String, token:String)
+    func didLoginWithFacebookUser(userId:String, name:String?, token:String)
     func didLogout();
 }
 
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController
     
     func start()
     {
-        print("Start")
+        self.performSegue(withIdentifier: "start", sender: self)
     }
     
     // MARK: Facebook
@@ -87,7 +87,7 @@ class LoginViewController: UIViewController
     {
         assert(token != nil, "Facebook Access Token is nil")
         
-        self.delegate?.didLoginWithFacebookUser(userId: token!.userID, name: info["name"] as! String, token: token!.tokenString)
+        self.delegate?.didLoginWithFacebookUser(userId: token!.userID, name: info["name"] as? String, token: token!.tokenString)
     }
     
     func observerFacebookAccessTokenChange()

@@ -12,7 +12,26 @@ import FBSDKCoreKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelegate
 {
-    // MARK: Properties
+    //------------------------------------------------------------------
+    //
+    // MARK: - Class constants
+    //
+    //------------------------------------------------------------------
+    
+//    static let kSyncGatewayUrl = "http://us-east.testfest.couchbasemobile.com:4984/todolite"
+    static let kSyncGatewayUrl = "http://localhost:4984/todolite-swift"
+    static let kSyncGatewayWebSocketSupport = true
+    static let kGuestDBName = "guest"
+    static let kStorageType = kCBLSQLiteStorage
+    static let kEncryptionEnabled = false
+    static let kEncryptionKey = "seekrit"
+    static let kLoggingEnabled = true
+    
+    //------------------------------------------------------------------
+    //
+    // MARK: - Properties
+    //
+    //------------------------------------------------------------------
     
     var window: UIWindow?
     
@@ -26,10 +45,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelega
         }
     }
     
+    var database:CBLDatabase?
+    {
+        willSet {
+            self.willChangeValue(forKey: "database")
+        }
+        didSet {
+            self.didChangeValue(forKey: "database")
+        }
+    }
+    
     var loginViewController:LoginViewController!
-
+    
+    // Replication
+    
+    var push:CBLReplication?
+    var pull:CBLReplication?
+    
+    var lastSyncError:NSError?
+    
+    //------------------------------------------------------------------
+    //
+    // MARK: - Methods
+    //
+    //------------------------------------------------------------------
+    
+    //------------------------------------
     // MARK: UIApplicationDelegate
-
+    //------------------------------------
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions);
@@ -37,7 +81,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelega
         self.loginViewController = self.window?.rootViewController as! LoginViewController
         self.loginViewController.delegate = self
         
-        // Override point for customization after application launch.
+        self.enableLogging()
+        
         return true
     }
     
@@ -48,43 +93,332 @@ class AppDelegate: UIResponder, UIApplicationDelegate, LoginViewControllerDelega
         return handled;
     }
 
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    //---------------------------------
+    // MARK: Logging
+    //---------------------------------
+    
+    func enableLogging()
+    {
+        if AppDelegate.kLoggingEnabled
+        {
+            CBLManager.enableLogging("Database")
+            CBLManager.enableLogging("View")
+            CBLManager.enableLogging("ViewVerbose")
+            CBLManager.enableLogging("Query")
+            CBLManager.enableLogging("Sync")
+            CBLManager.enableLogging("SyncVerbose")
+            CBLManager.enableLogging("ChnageTracker")
+        }
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    //---------------------------------
+    // MARK: Database
+    //---------------------------------
+    
+    func databaseForName(name:String) -> CBLDatabase?
+    {
+        let dbName = "db\(name.md5().lowercased())"
+        
+        let option = CBLDatabaseOptions()
+        option.create = true
+        option.storageType = AppDelegate.kStorageType
+        option.encryptionKey = AppDelegate.kEncryptionEnabled ? AppDelegate.kEncryptionKey : nil
+        
+        do
+        {
+            let database = try CBLManager.sharedInstance().openDatabaseNamed(dbName, with: option)
+            
+            return database;
+        }
+        catch let error
+        {
+            print("Cannot create database with an error : \(error.localizedDescription)")
+        }
+        
+        return nil
     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+    
+    func databaseForUser(user:String?) -> CBLDatabase?
+    {
+        return user != nil ? databaseForName(name: user!) : nil;
     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    func databaseForGuest() -> CBLDatabase?
+    {
+        return databaseForName(name: AppDelegate.kGuestDBName)
     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    func migrateGuestDatabaseToUser(profile:Profile)
+    {
+        if let guestDB = self.databaseForGuest()
+        {
+            if guestDB.lastSequenceNumber > 0
+            {
+                var rows:CBLQueryEnumerator!
+                
+                do
+                {
+                    rows = try guestDB.createAllDocumentsQuery().run()
+                }
+                catch
+                {
+                    return
+                }
+                
+                if let userDB = profile.database
+                {
+                    for case let row as CBLQueryRow in rows
+                    {
+                        if let doc = row.document
+                        {
+                            let newDoc = userDB.document(withID: doc.documentID)
+                            
+                            if let userProperties = doc.userProperties
+                            {
+                                do
+                                {
+                                    try newDoc?.putProperties(userProperties)
+                                }
+                                catch let error
+                                {
+                                    print("Error when saving a new document during migrating guest data : \(error.localizedDescription)")
+                                    continue
+                                }
+                            }
+                            
+                            if let attachments = doc.currentRevision?.attachments
+                            {
+                                if attachments.count > 0
+                                {
+                                    let newRev = newDoc?.currentRevision?.createRevision()
+                                    
+                                    for att in attachments
+                                    {
+                                        newRev?.setAttachmentNamed(att.name, withContentType: att.contentType, content: att.content)
+                                    }
+                                    
+                                    do
+                                    {
+                                        try newRev?.save()
+                                    }
+                                    catch let error
+                                    {
+                                        print("Error when saving an attachment during migrating guest data : \(error.localizedDescription)")
+                                    }
+                                }
+                            }
+                        }
+                        
+                        do
+                        {
+                            try List.updateAllListsInDatabase(db: profile.database!, withOwner: profile)
+                        }
+                        catch
+                        {
+                            print("Error when transfering the ownership of the list documents : \(error.localizedDescription)");
+                        }
+                        
+                        do
+                        {
+                            try guestDB.delete()
+                        }
+                        catch
+                        {
+                            print("Error when deleting the guest database during migrating guest data : \(error.localizedDescription)")
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    //---------------------------------
+    // MARK: Replication
+    //---------------------------------
+    
+    func startReplicationWithAuthenticator(authenticator:CBLAuthenticatorProtocol)
+    {
+        if (pull == nil && push == nil)
+        {
+            if let syncURL = NSURL(string: AppDelegate.kSyncGatewayUrl) as? URL
+            {
+                pull = database!.createPullReplication(syncURL)
+                pull!.continuous = true;
+             
+                if !AppDelegate.kSyncGatewayWebSocketSupport
+                {
+                    pull?.customProperties = ["websocket" : false]
+                }
+                
+                push = database!.createPushReplication(syncURL)
+                push!.continuous = true;
+                
+                NotificationCenter.default
+                    .addObserver(self, selector: #selector(AppDelegate.replicationProgress),
+                                 name: Notification.Name.cblReplicationChange, object: pull!)
+                
+                NotificationCenter.default
+                    .addObserver(self, selector: #selector(AppDelegate.replicationProgress),
+                                 name: Notification.Name.cblReplicationChange, object: push!)
+            }
+        }
+        
+        push?.authenticator = authenticator;
+        pull?.authenticator = authenticator;
+        
+        if (pull?.running)!
+        {
+            pull?.stop()
+        }
+        pull?.start()
+        
+        if (push?.running)!
+        {
+            push?.stop()
+        }
+        push?.start()
+    }
+    
+    func stopReplication()
+    {
+        pull?.stop()
+        
+        do
+        {
+            try pull?.clearAuthenticationStores()
+        }
+        catch let error
+        {
+            print(error);
+        }
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.cblReplicationChange, object: pull)
+        
+        pull = nil
+        
+        push?.stop();
+        
+        do
+        {
+            try push?.clearAuthenticationStores()
+        }
+        catch let error
+        {
+            print(error);
+        }
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.cblReplicationChange, object: push)
+        
+        push = nil;
+    }
+    
+    func replicationProgress(notification:NSNotification)
+    {
+        print("pull status: \(pull!.status.rawValue)")
+        print("push status: \(push!.status.rawValue)")
+        
+        if (pull?.status == CBLReplicationStatus.active || push?.status == CBLReplicationStatus.active)
+        {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        }
+        else
+        {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
+        
+        if let syncError = pull?.lastError as? NSError ?? push?.lastError as? NSError
+        {
+            if syncError != lastSyncError
+            {
+                lastSyncError = syncError
+                
+                if syncError.code == 404
+                {
+                    showMessage(message: "Authentication failed", withTitle: "Sync Error")
+                    logout()
+                }
+                else
+                {
+                    showMessage(message: syncError.localizedDescription, withTitle: "Sync Error")
+                }
+            }
+        }
+    }
+    
+    //------------------------------------
+    //  MARK: Login/Logout
+    //------------------------------------
+    
+    func logout()
+    {
+        loginViewController.logoutFacebook()
     }
     
     // MARK: LoginViewControllerDelegate
     
     func didLoginAsGuest()
     {
-        
+        self.database = databaseForGuest()
+        self.currentUserId = nil
     }
     
-    func didLoginWithFacebookUser(userId:String, name:String, token:String)
+    func didLoginWithFacebookUser(userId:String, name:String?, token:String)
     {
+        self.currentUserId = userId
         
+        if let database = databaseForUser(user: userId)
+        {
+            self.database = database
+            
+            var profile = Profile.profileInDatabase(db: database, forExistinUserId: userId)
+            
+            if profile == nil
+            {
+                if name != nil
+                {
+                    profile = Profile.profieInDatabase(db: database, forNewUserId: userId, name!)
+                    
+                    guard profile != nil else
+                    {
+                        print("Cannot create a new user profile")
+                        return
+                    }
+                    
+                    do
+                    {
+                        try profile!.save()
+                        
+                        migrateGuestDatabaseToUser(profile: profile!)
+                    }
+                    catch
+                    {
+                        print("Cannot create a new user profile with error : \(error.localizedDescription)")
+                    }
+                }
+                else
+                {
+                    print("Cannot create a new user profile as there is no name information.")
+                }
+            }
+            
+            if profile != nil
+            {
+                startReplicationWithAuthenticator(authenticator: CBLAuthenticator.facebookAuthenticator(withToken: token))
+            }
+            else
+            {
+                showMessage(message: "Cannot create a new user profile", withTitle: "Error")
+            }
+        }
     }
     
     func didLogout()
     {
-        
+        currentUserId = nil
+        stopReplication()
+        database = nil
+        loginViewController.dismiss(animated: true, completion: nil)
     }
 
     // MARK: Alerts
