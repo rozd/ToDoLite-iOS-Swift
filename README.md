@@ -1,6 +1,6 @@
 ## ToDoLite-iOS-Swift
 
-_This is [ToDoLite-iOS](https://github.com/couchbaselabs/ToDoLite-iOS) application from Couchbaselabs ported to Swift 3_
+_This is [ToDoLite-iOS](https://github.com/couchbaselabs/ToDoLite-iOS) application from Couchbase Labs ported to Swift 3_
 
 _Next original description from Couchbase Labs' repository:_
 
