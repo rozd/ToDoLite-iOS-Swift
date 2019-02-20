@@ -94,7 +94,7 @@ class LoginViewController: UIViewController
     {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.FBSDKAccessTokenDidChange, object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.observerFacebookAccessTokenChange), name: NSNotification.Name.FBSDKAccessTokenDidChange, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(self.facebookAccessTokenChnaged), name: NSNotification.Name.FBSDKAccessTokenDidChange, object: nil);
     }
     
     func unobserveFacebookAccessTokenChange()
@@ -146,5 +146,7 @@ class LoginViewController: UIViewController
         controller.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action:UIAlertAction) in
             self.logoutFacebook();
         }))
+        
+        self.present(controller, animated: true, completion: nil)
     }
 }
